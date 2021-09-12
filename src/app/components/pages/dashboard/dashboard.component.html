@@ -1,0 +1,23 @@
+<body class="backg">
+    <app-filter></app-filter>
+    <header class="title">
+        <h1>Personagens de Rick and Morty</h1>
+    </header>
+    <section class="content">
+        <div *ngFor="let atributs of atribute">
+            <div class="card">
+                <img [src]="atributs.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Name: {{ atributs.name }}</p>
+                    <p class="card-text">Status: {{ atributs.status }}</p>
+                    <p class="card-text">Species: {{ atributs.species }}</p>
+                    <p class="card-text">Gender: {{ atributs.gender }}</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="credit">
+
+    </footer>
+</body>
