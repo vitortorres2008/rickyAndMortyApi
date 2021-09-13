@@ -9,7 +9,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'dashboard', loadChildren: () => import('./components/pages/dashboard/dashboard.module').then(m => m.DashboardModule) 
+    path: 'dashboard',
+    children: [
+      {
+      path: '',
+      component: DashboardComponent
+      }
+    ]
   }
 ];
 

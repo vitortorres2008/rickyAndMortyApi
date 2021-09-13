@@ -3,44 +3,35 @@
     <header class="title">
         <h1>Personagens de Rick and Morty</h1>
     </header>
-
-    <form autocomplete="off" novalidate [formGroup]="listFilter">
-        <div class="float-left width50">
-            <div class="padding10">
-                <!-- <input placeholder="Pesquise aqui" name="text" formControlname="text"> -->
-
-            </div>
-        </div>
-    </form>
-
-
-    <section class="content">
-        <div *ngFor="let atributs of atribute">
-            <div class="card">
-                <img [src]="atributs.image" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <p class="card-text">Name: {{ atributs.name }}</p>
-                    <p class="card-text">Status: {{ atributs.status }}</p>
-                    <p class="card-text">Species: {{ atributs.species }}</p>
-                    <p class="card-text">Gender: {{ atributs.gender }}</p>
+    <div>
+        <section class="content">
+            <div *ngFor="let atributs of atribute">
+                <div class="card">
+                    <img [src]="atributs.image" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Name: {{ atributs.name }}</p>
+                        <p class="card-text">Status: {{ atributs.status }}</p>
+                        <p class="card-text">Species: {{ atributs.species }}</p>
+                        <p class="card-text">Gender: {{ atributs.gender }}</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="pagination">
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link cursor" aria-label="Previous" (click)="back()">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item">
-                    <a class="page-link cursor" aria-label="Next" (click)="next()">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+        </section>
+        <footer class="pagination">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link cursor" aria-label="Previous" (click)="back()">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link cursor" aria-label="Next" (click)="next()">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>

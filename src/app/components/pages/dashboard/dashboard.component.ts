@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
 import { BankApiService } from '@app/bank-api.service';
 import { Atribute } from '@app/shared/model/atribute.model';
 import { IConfigParams } from '@app/shared/model/config-params.interface';
@@ -35,7 +34,6 @@ export class DashboardComponent implements OnInit {
     .pipe(debounceTime(400))
     .subscribe((val: string) => {
       this.config.name = val;
-     // this.searchReset();
     })
 
     this.getForPage();
@@ -70,9 +68,5 @@ export class DashboardComponent implements OnInit {
       this.atribute = atribute;
   }, error => {})
   }
-
-  // private searchReset(): void {
-  //   this.config.page = 1;
-  // }
 }
 

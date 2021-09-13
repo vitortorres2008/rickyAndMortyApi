@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
 import { FilterComponent } from './shared/components/filter/filter.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BankApiService } from './bank-api.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BankApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
